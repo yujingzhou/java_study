@@ -21,11 +21,11 @@ public class StringStady {
 	public static void main(String[] args) {
 		StringStady stringStady = new StringStady();
 		stringStady.testForSplit();
-		try {
-			DataInput di = new DataInputStream(new FileInputStream(new File("")));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+		
+		//format
+		String t = String.format("%1$d%%", 10);
+		System.out.println(t);
+		System.out.println(System.getProperty("line.separator"));
 	}
 	
 	/**
@@ -34,8 +34,6 @@ public class StringStady {
 	public void testForSplit(){
 		this.setInit("adsfasd,fasdfasd,fasdfasdfasdfa");
 		System.out.println(this.getInit().split(",").length);
-		
-		
 	}
 	
 	public String getInit(){
