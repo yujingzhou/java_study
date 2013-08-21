@@ -16,6 +16,11 @@ public class DateTest {
 		//增加月份后date
 		addMonth(date, 10);
 		System.out.println(simpleDateFormat.format(date));
+		
+		Date temp = new Date(1374725517501l);
+		System.out.println(System.currentTimeMillis());
+		System.out.println(simpleDateFormat.format(temp));
+		
 	}
 	
 	/**

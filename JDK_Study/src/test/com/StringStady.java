@@ -26,6 +26,15 @@ public class StringStady {
 		String t = String.format("%1$d%%", 10);
 		System.out.println(t);
 		System.out.println(System.getProperty("line.separator"));
+		
+		String temp = "abcd";
+		System.out.println(temp.codePointAt(2));
+		String old = "5.12.2".replaceAll("\\.", "");
+		String ok = "5.9.1".replaceAll("\\.", "");
+		System.out.println(old);
+		System.out.println(ok);
+		
+		System.out.println(old.compareTo(ok));
 	}
 	
 	/**
