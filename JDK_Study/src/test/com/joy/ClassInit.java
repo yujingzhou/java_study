@@ -1,11 +1,13 @@
 package test.com.joy;
 
-interface Parent {
+class Parent {
     public static int i = 5;
-
+    static{
+        System.out.println("p");
+    }
 }
 
-class Child implements Parent {
+class Child extends Parent {
     public static int j = 6;
     static{
         System.out.println("c");
@@ -18,15 +20,15 @@ public class ClassInit {
      * @param args
      */
     public static void main(String[] args) {
-//        Parent p = new Child();
-//        System.out.println(p.i); //p c 6
+        Parent p = new Child();
+        System.out.println(p.i); //p c 6
 //        
-//        Parent p1 = new Parent();
-//        System.out.println(p1.i);//p 5
+        Parent p1 = new Parent();
+        System.out.println(p1.i);//p 5
         
         System.out.println(Child.i);//p 5
         
-//        System.out.println(Child.j);// p c 6
+        System.out.println(Child.j);// p c 6
         
         //ns 级别的访问时间，返回的是随机时间
         System.out.println(System.nanoTime());
